@@ -6,7 +6,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f9fafc;
   color: #222;
   height: 100%;
@@ -25,56 +25,13 @@ main {
   width: 90%;
   max-width: 1100px;
   margin: 100px auto;
-  margin-top: 180px;
   background-color: #fff;
   padding: 60px 80px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
-/*HEADER*/
-header {
-  background-color: #0b2545;
-  color: white;
-  padding: 25px 5%;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
 
-header h1 {
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 28px;
-}
-
-nav a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a.active {
-  color: #4da3ff;
-}
-
-/*HOME*/
 .intro {
   text-align: center;
 }
@@ -127,7 +84,7 @@ nav a.active {
 
 /*HOBBIES*/
 .hobbies {
- display: flex;
+  display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 40px;
@@ -170,10 +127,10 @@ nav a.active {
 
 /*CV PAGINA*/
 .cv-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
   width: 90%;
   max-width: 1200px;
   background: #fff;
@@ -182,8 +139,10 @@ nav a.active {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.cv-left {
-  flex: 1 1 60%;
+.cv-left, .cv-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .cv-left h2 {
@@ -211,25 +170,63 @@ nav a.active {
   margin-bottom: 8px;
 }
 
-.cv-right {
-  flex: 0 0 35%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.cv-right img {
+.cv-right img,
+.cv-photo {
   width: 100%;
   max-width: 380px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+#purplebar {
+  background-color: rgb(139, 3, 174) !important;
+}
+
+#greenbar {
+  background-color: rgb(22, 120, 48) !important;
+}
+
+#owlhouseSkills { 
+  width: 320px;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 10px;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.owl-nav button {
+  background: rgba(0,0,0,0.5);
+  color: black !important;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  pointer-events: auto;
+}
+
+.owl-nav button:hover {
+  background: rgba(0,0,0,0.8);
+}
+.owl-carousel {
+  position:relative;
+}
+
+@media (max-width: 600px) {
+  #owlhouseSkills {
+    width: 250px;
+  }
+  .cardSize {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 950px) {
   .cv-layout {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     padding: 40px 20px;
   }
 
@@ -288,7 +285,7 @@ nav a.active {
   text-align: center;
 }
 
-button {
+.send-button {
   background-color: #0b2545;
   color: white;
   border: none;
@@ -299,9 +296,9 @@ button {
   width: 100%;
   font-weight: 600;
   transition: background-color 0.2s ease;
-}
+} 
 
-button:hover {
+.send-button:hover {
   background-color: #12376e;
 }
 
@@ -318,12 +315,6 @@ footer {
 footer p {
   margin: 5px 0;
 }
-
-footer a {
-  color: #4da3ff;
-  text-decoration: none;
-}
-
 footer a:hover {
   text-decoration: underline;
 }
@@ -347,17 +338,8 @@ footer a:hover {
     width: 100%;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
 }
+
 /*HERO SECTIE*/
 .hero {
   width: 100%;
@@ -372,7 +354,6 @@ footer a:hover {
   color: white;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 119px;
 }
 
 .hero-image {
@@ -472,3 +453,28 @@ footer a:hover {
   }
 }
 
+.carousel .carousel-item {
+  height: 750px;
+}
+
+.carousel .carousel-item img {
+  height: 750px;
+  width: 425px;
+  object-fit: contain;
+}
+
+.tekstSlider {
+  color: white;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.nav-bg {
+  background-color: #0b2545 !important
+}

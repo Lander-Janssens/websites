@@ -7,45 +7,131 @@
   <meta name="keywords" content="HTML, CSS">
   <meta name="author" content="Lander Janssens">
   <title>Portfolio | Lander Janssens</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
  <link rel="icon" type="image/x-icon" href="Mogelijke foto's voor op de website/L.ico">
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Lander Janssens</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="over-mij.html">Over Mij</a></li>
-        <li><a href="hobbies.html" class="active">Hobbies</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark nav-bg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Lander Janssens</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="over-mij.html">Over Mij</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="hobbies.html">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="cv.html">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    <h2>Mijn Hobbies</h2>
+    <h2 style="text-align: center">Mijn Hobbies</h2>
 
     <section class="hobbies">
-      <div class="hobby-card">
-        <h3>Hobby 1: Gamen</h3>
-        <img src="Mogelijke foto's voor op de website/Foto van minecraft.webp" alt="In deze foto zie je een gaming laptop waar het spelletje minecraft openstaat">
-        <p>Een van mijn favoriete hobby’s is gamen. Ik vind het leuk om in verschillende digitale werelden te duiken en uitdagingen aan te gaan. Bij veel games moet je snel reageren of slimme strategieën bedenken om verder te komen. Dat maakt het spannend en leuk. Soms speel ik alleen om rustig te ontspannen, maar vaak speel ik ook online met vrienden. Dan praten we via een headset met elkaar en proberen we samen een level of missie te voltooien. Gamen geeft mij de kans om beter te worden in samenwerken en snel beslissingen te nemen. Daarnaast is het een fijne manier om even mijn gedachten te verzetten na een drukke dag. Het gevoel dat je krijgt wanneer je eindelijk een moeilijk level haalt na veel oefenen, geeft me veel voldoening. Daarom is gamen voor mij niet alleen ontspanning, maar ook een manier om mezelf steeds verder uit te dagen.</p>
+      <div id="carouselHobbies" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="4" aria-label="Slide 5"></button>
+       <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+   <img src="Mogelijke foto's voor op de website/Foto van minecraft.webp" class="d-block w-100"  alt="In deze foto zie je een gaming laptop waar het spelletje minecraft openstaat">
+ 
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Gamen</h2>
+        <p class="tekstSlider">
+          Ik vind het leuk om in verschillende digitale werelden te duiken en uitdagingen aan te gaan. Bij veel games moet je snel reageren of slimme strategieën bedenken om verder te komen. Dat maakt het spannend en leuk. Soms speel ik alleen om rustig te ontspannen, maar vaak speel ik ook online met vrienden.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="Mogelijke foto's voor op de website/Foto reptielen3.webp" class="d-block w-100" alt="In deze foto zie je 2 dwergbaardagamen dit zijn reptielen">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Mijn dieren</h2>
+        <p class="tekstSlider">
+          Ik heb zelf reptielen waar ik dagelijks voor zorg. Reptielen zijn bijzondere dieren met een eigen gedrag en leefwijze. Ze zijn heel anders dan typische huisdieren en dat maakt ze voor mij extra interessant.
+        </p>
       </div>
 
-      <div class="hobby-card">
-        <h3>Hobby 2: Mijn dieren</h3>
-        <img src="Mogelijke foto's voor op de website/Foto reptielen3.webp" alt="In deze foto zie je 2 dwergbaardagamen dit zijn reptielen">
-        <p>Naast gamen ben ik erg enthousiast over dieren, vooral reptielen. Ik heb zelf reptielen waar ik dagelijks voor zorg. Reptielen zijn bijzondere dieren met een eigen gedrag en leefwijze. Ze zijn heel anders dan typische huisdieren zoals honden of katten, en dat maakt ze voor mij extra interessant. Het verzorgen van reptielen vraagt verantwoordelijkheid, want hun leefomgeving moet precies goed zijn. Ik moet bijvoorbeeld de temperatuur en luchtvochtigheid in hun terrarium controleren en zorgen dat ze het juiste voedsel krijgen. Soms moet ik zelfs insecten voeren, wat eerst even wennen was. Het geeft me een goed gevoel om te zien dat mijn dieren gezond zijn en zich op hun gemak voelen. Door goed op hun gedrag te letten, leer ik hun signalen beter begrijpen. Deze hobby heeft me veel geduld en zorgzaamheid geleerd. Ik vind het mooi dat ik een band kan opbouwen met dieren die vaak verkeerd worden begrepen of eng gevonden worden door anderen.</p>
+    </div>
+    <div class="carousel-item">
+      <img src="Mogelijke foto's voor op de website/Foto Reptielen1.webp" class="d-block w-100" alt="In deze foto zie je 2 dwergbaardagamen in een drinkbakje">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Mijn dieren in "bad"</h2>
+        <p class="tekstSlider">
+         Dwergbaardagamen houden er van om eens in een bad te zitten.
+        </p>
       </div>
+    </div>
 
-      <div class="hobby-card">
-        <h3>Hobby 3: klimmen</h3>
-        <img src="Mogelijke foto's voor op de website/Ik in een boom.webp" alt="In deze foto zie je Lander Janssens in een grote dikke boom zitten">
-        <p>Een andere hobby die ik graag doe, is klimmen in bomen. Dit doe ik meestal buiten als het lekker weer is. Het gevoel van omhoog klimmen en steeds hoger komen geeft me een gevoel van vrijheid en avontuur. Ik moet goed nadenken waar ik mijn handen en voeten neerzet, zodat ik niet val. Daardoor leer ik om voorzichtig en geconcentreerd te zijn. Als ik eenmaal boven ben, voelt het alsof ik even weg ben van alles op de grond. Ik geniet van het uitzicht en het rustige gevoel dat ik krijg als ik boven tussen de takken zit. Soms klim ik alleen, maar ik vind het ook leuk om met vrienden te zien wie het hoogste durft of de beste boom kan vinden. Klimmen in bomen is voor mij een manier om actief bezig te zijn in de natuur. Het geeft me energie en maakt mijn hoofd leeg.</p>
+     <div class="carousel-item">
+      <img src="Mogelijke foto's voor op de website/Foto Reptielen2.webp" class="d-block w-100" alt="In deze foto zie je 2 dwergbaardagamen in een terrarium">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Mijn dieren en het terrarium</h2>
+        <p class="tekstSlider">
+          De reptielen leven in dit terarium waar ik om de zoveel tijd andere dingen in zet voor variatie.
+        </p>
       </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="Mogelijke foto's voor op de website/Eieren van mijn reptielen.webp" class="d-block w-100" alt="In deze foto zie je eieren van mijn dwergbaardagamen">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>De eieren</h2>
+        <p class="tekstSlider">
+          Ik kweek ook met deze reptielen, Dit zijn de eieren die er van voor komen.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+        <img src="Mogelijke foto's voor op de website/Ik in een boom.webp" class="dblock w-100" alt="In deze foto zie je Lander Janssens in een grote dikke boom zitten">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Klimmen</h2>
+        <p class="tekstSlider">
+          Klimmen in bomen geeft me een gevoel van vrijheid en avontuur, terwijl ik geconcentreerd en voorzichtig moet zijn. Boven tussen de takken geniet ik van het uitzicht, de rust en de energie die het me geeft.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselHobbies" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselHobbies" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     </section>
   </main>
 
@@ -54,5 +140,8 @@
   <p>📧 <a href="mailto:DeLanderJanssens@gmail.com">DeLanderJanssens@gmail.com</a> | 💼 <a href="https://www.linkedin.com/in/lander-janssens-a57881384/">LinkedIn</a></p>
   </footer>
 
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
